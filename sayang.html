@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f9f9f9;
+        }
+
+        #story {
+            font-size: 18px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+
+            /* letter-spacing: 2px;
+            animation: typing 3s steps(40) 1s forwards; */
+        }
+
+        /* #pengantar {
+            overflow: hidden;
+            width: 0;
+            animation: typing;
+            animation-duration: 1.5s;
+            animation-timing-function: steps(30, end);
+            animation-fill-mode: forwards;
+        } */
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<audio autoplay>
+    <!-- <source src="horse.ogg" type="audio/ogg"> -->
+    <source src="./the-cradle-of-your-soul-15700.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+<body>
+    
+
+    <div id="story">
+        <p id="pengantar">Pertemuan</p>
+        <br>
+        <p>Hari ini aku mencoba keberuntunganku melamar ke sebuah sekolah yang kudapat dari dosen</p>
+        <p>Tak kusangka aku melihat wanita cantik keluar dari sekolah itu</p>
+        <img src="./img1.jpeg" width="200px">
+        <p>Ekspresiku tak bisa ku kendalikan, kemudian dia menanyakan sesuatu</p>
+        <p>"Bapa Mau Ketemu Siapa?"</p>
+    </div>
+    <div id="tombol">
+        <button onclick="choice1()">Saya Ingin Melamar Kerja</button>
+    </div>
+
+    <script>
+        function choice1() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>"Saya Ingin Melamar Kerja Bu"</p>';
+            storyElement.innerHTML += "<p>Dia menyuruhku menunggu, tetapi aku makin penasaran dengan ibu tersebut</p>";
+            storyElement.innerHTML += "<p>Akhirnya Ada Seseorang menghampiri ku, seorang lelaki paruh baya mengajak ku ke ruangan nya</p>";
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice2()">Ikuti Arahan dari lelaki tersebut</button>'
+
+        }
+
+
+        function choice2() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>"Perkenalkan nama saya Tedi Simail"</p>';
+            storyElement.innerHTML += "<p>Akhirnya kami melakukan wawancara seperti penerimaan kerja pada umum nya</p>";
+            storyElement.innerHTML += "<p>akhirnya aku diterima bekerja disekolah tersebut. tak terasa aku sudah bekerja selama 1 bulan</p>";
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice3()">Next</button>'
+
+        }
+
+
+        function choice3() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += "<p>Dibulan pertama aku bekerja, akhirnya aku tersadar bahwa <b>aku telah menyukai ibu tersebut yang bernama dewi sri</b></p>";
+            storyElement.innerHTML += ' <img src="./img2.jpeg" width="200px">'
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice4()">Next</button>'
+
+        }
+
+        function choice4() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += "<p>Pada malam aku tersadar bahwa aku telah jatuh hati, esoknya aku mantapkan <b>untuk menyatakan perasaan ku</b></p>";
+            storyElement.innerHTML += "<img src='./img3.jpeg' width=200>"
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice5()">Next</button>'
+
+        }
+
+        function choice5() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += "<p>Belum tiba besok, aku mencoba untuk menyatakan nya dimalam hari, akhirnya dengan perasaan yang berdegup dengan kencang aku beranikan untuk menyatakan perasaan ku via telpon </b></p>";
+            storyElement.innerHTML += '<p>"Halo budew aku pengen ngomong serius sebentar"</p>';
+            storyElement.innerHTML += '<p>"Ada apa pa rizki?"</p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice6()">Budew sebenarnya saya suka budew</button>'
+            buttonElement.innerHTML += '<button onclick="choice7()">Budew administrasi saya belum kelar</button>'
+
+        }
+        function choice6() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>"Budew sebenarnya saya suka budew"</p>';
+            storyElement.innerHTML += '<p>suasana menjadi canggung, budew seolah ingin mengalihkan pembicaraan</p>';
+            storyElement.innerHTML += '<p>"iya pa rizki suka sebagai teman kan?"</p>';
+            storyElement.innerHTML += '<p>sudah kuduga, penolakan ini begitu menyakitkan, akhirnya kami berdua menjadi bermusuhan</p>';
+            storyElement.innerHTML += '<p>aku berfikir, kenapa dia tega dekat denganku sedangkan dia tak ingin menjadikan ku pasangan nya</p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice8()">Pertemuan Kedua</button>'
+
+        }
+        function choice7() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>"Budew administrasi saya belum kelar"</p>';
+            storyElement.innerHTML += '<p>suasana menjadi canggung, budew seolah ingin mengalihkan pembicaraan</p>';
+            storyElement.innerHTML += '<p>"iya pa rizki kenapa ga dikerjain atuh!!"</p>';
+            storyElement.innerHTML += '<p>Budew Menjadi Ilfeel dan tidak mau lagi mendekati pa rizki</p>';
+            storyElement.innerHTML += '<p><b>TAMAT</b></p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+
+        }
+
+        function choice8() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>Setelah Penolakan Itu kami menjadi musuh, akan tetapi aku tak bisa bohong bahwa aku masih menyukai nya</p>';
+            storyElement.innerHTML += '<p>tiba suatu momen, sekolah kedatangan tenaga baru bernama pa angga</p>';
+            storyElement.innerHTML += '<p>berkat dia, kami berdua bisa menjadi akrab kembali.</p>';
+            storyElement.innerHTML += '<p>karena aku sudah merasa akrab kembali, kucoba untuk mengungkapkan kembali</p>';
+            storyElement.innerHTML += '<p>"Budew sebenarnya saya suka budew"</p>';
+            storyElement.innerHTML += '<p>suasana menjadi canggung, budew seolah ingin mengalihkan pembicaraan</p>';
+            storyElement.innerHTML += '<p>"iya pa rizki saya mah ga tau suka tuh kaya gimana"</p>';
+            storyElement.innerHTML += '<p>sudah kuduga, penolakan ini begitu menyakitkan, akhirnya kami berdua menjadi bermusuhan</p>';
+            storyElement.innerHTML += '<p>aku berfikir, kenapa dia tega dekat denganku sedangkan dia tak ingin menjadikan ku pasangan nya</p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice9()">Pertemuan Ketiga</button>'
+
+        }
+
+        function choice9() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>Setelah Penolakan kedua akhirnya aku mulai mengerti, bahwa teknik nya harus diperbaiki</p>';
+            storyElement.innerHTML += '<p>sambil mengobati luka yang kudapat, aku mencoba mencari hati yang lain agar dapat mengobati luka ku</p>';
+            storyElement.innerHTML += '<p>beberapa wanita sudah ku dekati, tapi luka ku masih mengangga dan tak pernah tertutup</p>';
+            storyElement.innerHTML += '<p>tiba disuatu momen aku kembali untuk mengejar budew, saat itu kita sedang berantem</p>';
+            storyElement.innerHTML += '<p>"Budewww aku bawakan seblak"</p>';
+            storyElement.innerHTML += '<p>kita berdua marah sangat marah, sehingga seblak tersebut aku kasih ke bocil di sekitar kosan</p>';
+            storyElement.innerHTML += '<p>"makasih OM"</p>';
+            storyElement.innerHTML += '<p>akhirnya aku coba baikan dengan budew, aku coba lagi terus mendekati nya setiap hari dan berhasil</p>';
+            storyElement.innerHTML += '<p>inilah saatnya untuk melakukan percobaan ketiga</p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice10()">Moment Of Truth</button>'
+
+        }
+
+        function choice10() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>pada tanggal 03 oktober 2022 aku mengajar budew untuk pergi memakan soto, akan tetapi susana nya kurang mengenakan karena hujan dan tukang soto tersebut tutup</p>';
+            storyElement.innerHTML += '<p>mengganti tujuan, kita pilih menjadi ayam penyet disebelah tukang soto</p>';
+            storyElement.innerHTML += '<p>hujan berjatuhan, suara kendaraan dijalan yang kian ramai mulai mengiringi keheningan kita berdua</p>';
+            storyElement.innerHTML += '<p>dengan berani aku menyatakan perasaan aku kembali, dan kali ini harus berhasil</p>';
+            storyElement.innerHTML += '<p>"budew tau ga, saya mah percaya nya budew tuh bakal jadi pasangan saya, udah jadi tujuan terakhir hidup saya"</p>';
+            storyElement.innerHTML += '<p>kali ini dia memberikan respon yang positif, dia juga mengutarakan isi hatinya kepadaku</p>';
+            storyElement.innerHTML += '<p>"iya pa rizki, saya mah ga nyangka gitu kalau misalnya bapa jadian sama saya, terus kita nikah bareng"</p>';
+            storyElement.innerHTML += '<p>karena sudah ada indikasi dia juga mau, akhirnya aku putuskan kita jadian esok harinya</p>';
+            storyElement.innerHTML += '<p>"TIDAKKKK AKU TERCULIK"</p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice11()">Pesan dan Kesan</button>'
+
+        }
+        function choice10() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>pada tanggal 03 oktober 2022 aku mengajar budew untuk pergi memakan soto, akan tetapi susana nya kurang mengenakan karena hujan dan tukang soto tersebut tutup</p>';
+            storyElement.innerHTML += '<p>mengganti tujuan, kita pilih menjadi ayam penyet disebelah tukang soto</p>';
+            storyElement.innerHTML += '<p>hujan berjatuhan, suara kendaraan dijalan yang kian ramai mulai mengiringi keheningan kita berdua</p>';
+            storyElement.innerHTML += '<p>dengan berani aku menyatakan perasaan aku kembali, dan kali ini harus berhasil</p>';
+            storyElement.innerHTML += '<p>"budew tau ga, saya mah percaya nya budew tuh bakal jadi pasangan saya, udah jadi tujuan terakhir hidup saya"</p>';
+            storyElement.innerHTML += '<p>kali ini dia memberikan respon yang positif, dia juga mengutarakan isi hatinya kepadaku</p>';
+            storyElement.innerHTML += '<p>"iya pa rizki, saya mah ga nyangka gitu kalau misalnya bapa jadian sama saya, terus kita nikah bareng"</p>';
+            storyElement.innerHTML += '<p>karena sudah ada indikasi dia juga mau, akhirnya aku putuskan kita jadian esok harinya</p>';
+            storyElement.innerHTML += '<p>"TIDAKKKK AKU TERCULIK"</p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+            buttonElement.innerHTML += '<button onclick="choice11()">Pesan dan Kesan</button>'
+
+        }
+
+        function choice11() {
+            var storyElement = document.getElementById('story');
+            storyElement.innerHTML = "";
+            storyElement.innerHTML += '<p>Terima kasih tak terhingga, sayangku, untuk setiap momen indah dan tulus yang telah kita lewati bersama. Dalam setiap langkah hidup ini, aku merasa begitu beruntung memilikimu di sampingku. <br><br>Terima kasih karena telah menjadi penyemangatku di saat-saat sulit dan kebahagiaanku di saat-saat indah, Aku begitu bangga memiliki pasangan sehebat dirimu. <br><br>Kebaikan hatimu, dedikasimu, dan keberanianmu menginspirasi dan memotivasiku setiap hari. Melihatmu tumbuh dan berkembang, menjadikan hatiku penuh kebanggaan<br><br>. Bersama, kita bukan hanya sekadar pasangan, tapi mitra hidup yang saling melengkapi dan aku bersyukur setiap hari memilikimu sebagai bagian dari kisah hidupku.</p>';
+            var buttonElement = document.getElementById('tombol');
+            buttonElement.innerHTML = "";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
